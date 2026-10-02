@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% comment %} Página de inicio: resume la API y enlaza la documentación. {% endcomment %}
+
+{% block content %}
+<h1>🎫 Boletería <span>API</span></h1>
+<p>Venta de entradas para eventos y conciertos · Django REST Framework + PostgreSQL + JWT</p>
+
+<div class="panel">
+  <p>📘 <a href="/api/docs/">Swagger / OpenAPI (/api/docs/)</a> · <a href="/admin/">Admin</a></p>
+</div>
+
+<div class="panel">
+  <h2>Matriz de roles y permisos</h2>
+  <table>
+    <tr><th>Rol</th><th>Método</th><th>Endpoint</th></tr>
+    <tr><td><span class="tag">PÚBLICO</span></td><td>GET</td><td><code>/api/eventos/</code></td></tr>
+    <tr><td><span class="tag">PÚBLICO</span></td><td>GET</td><td><code>/api/eventos/{id}/sectores/</code></td></tr>
+    <tr><td><span class="tag">ESPECTADOR</span></td><td>GET / POST / DELETE</td><td><code>/api/carro-tickets/</code></td></tr>
+    <tr><td><span class="tag">ESPECTADOR</span></td><td>POST</td><td><code>/api/compras/pagar/</code></td></tr>
+    <tr><td><span class="tag">ESPECTADOR</span></td><td>GET</td><td><code>/api/mis-entradas/</code></td></tr>
+    <tr><td><span class="tag">ORGANIZADOR</span></td><td>POST / PUT / DELETE</td><td><code>/api/eventos/</code></td></tr>
+    <tr><td><span class="tag">ORGANIZADOR</span></td><td>PATCH</td><td><code>/api/compras/{id}/estado/</code></td></tr>
+  </table>
+</div>
+{% endblock %}
