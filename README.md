@@ -17,4 +17,3 @@ Swagger: http://127.0.0.1:8000/api/docs/
 - organizador1 / Organiza.Demo.2026
 - espectador1 / Espectador.Demo.2026
 - admin / Admin.Demo.2026
-- 
